@@ -1,0 +1,17 @@
+name: Pull Request CI Pipeline
+
+on:
+  pull_request:
+    types: [synchronize, opened]
+
+jobs:
+
+  build:
+    name: Continuous Integration of the endpoint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Display something useless
+      run: |
+        echo "Hello World automated from the PR pipeline !"

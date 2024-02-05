@@ -1,0 +1,17 @@
+name: Master CICD Pipeline
+
+on:
+  push:
+    branches: main
+
+jobs:
+
+  build:
+    name: Continuous Integration of the endpoint
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Display something useless
+      run: |
+        echo "Hello World automated from the master pipeline !"
